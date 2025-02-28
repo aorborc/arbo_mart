@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "761488138627",
+    "firebase_url": "https://arbo-mart-b2b-default-rtdb.firebaseio.com",
+    "project_id": "arbo-mart-b2b",
+    "storage_bucket": "arbo-mart-b2b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761488138627:android:59c75584d4a7b17a0996b6",
+        "android_client_info": {
+          "package_name": "com.arbomart.arbomart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnfS4UJWLiiAr5Hd1I7aEja_ZqxgqKFXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

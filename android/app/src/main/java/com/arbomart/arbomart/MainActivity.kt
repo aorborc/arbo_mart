@@ -1,4 +1,4 @@
-package com.vijay612.arbomart
+package com.arbomart.arbomart
 
 import android.os.Build
 import android.os.Bundle
