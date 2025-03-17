@@ -60,9 +60,9 @@ const OnboardingScreen = ({ navigation }) => {
           </View>
         )}
       />
-
+{/* navigation.navigate("SignIn")}  MainTabs*/}
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate("SignIn")}>
+        <TouchableOpacity style={styles.loginButton} onPress={() =>navigation.navigate("MainTabs")} >
           <Text style={styles.buttonText}>Login / Register</Text>
         </TouchableOpacity>
       </View>
