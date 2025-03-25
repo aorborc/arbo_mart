@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image, Dimensions, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, Image, Dimensions, StyleSheet,StatusBar } from "react-native";
 import SwiperFlatList from "react-native-swiper-flatlist";
 
 const { height, width } = Dimensions.get("window");
@@ -34,6 +34,7 @@ const OnboardingScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+        <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <View style={styles.logoContainer}>
         <Image source={require("../assets/icon.png")} style={styles.logo} />
       </View>

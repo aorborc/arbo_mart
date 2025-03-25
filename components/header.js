@@ -23,7 +23,6 @@ const Header = () => {
 
 const styles = StyleSheet.create({
     container:{
-
         height:60,
         flexDirection:"row"
     }

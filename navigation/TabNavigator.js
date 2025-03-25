@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image } from "react-native";
 
-import HomeScreen from "../pages/Home";
+import HomeStack from "./HomeStack";
 import CategoriesScreen from "../pages/Categories";
 import CollectionScreen from "../pages/Collection";
 import CartScreen from "../pages/Cart";
@@ -49,7 +49,7 @@ const TabNavigator = () => {
         headerShown: false, // Hide header for tabs
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Categories" component={CategoriesScreen} />
       <Tab.Screen name="Collection" component={CollectionScreen} />
       <Tab.Screen name="Order Again" component={CartScreen} />

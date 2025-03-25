@@ -15,7 +15,9 @@ import SupportScreen from '../pages/MyAccount/SupportAccount';
 import PlumberRegistrationScreen from '../pages/MyAccount/PlumberRegistration';
 import ServiceComplaintScreen from '../pages/MyAccount/servicesComplaint';
 import AboutUsScreen from '../pages/MyAccount/aboutUS';
-
+import NewServiceComplaintScreen from '../pages/MyAccount/NewServiceComplaint';
+import NewPlumberRegistration from '../pages/MyAccount/NewPlumberRegistration';
+import MakePayment from '../pages/MyAccount/MakePayment';
 const AccountStack = createStackNavigator();
 
 const AccountScreenNavigator = () => {
@@ -26,10 +28,15 @@ const AccountScreenNavigator = () => {
         component={MyAccountScreen}
         options={{ headerShown: false }}
       />
+      <AccountStack.Screen
+        name="MakePayment"
+        component={MakePayment}
+        options={{ headerShown: true,headerBackTitle:false,  title: 'MAKE PAYMENT', headerTintColor: 'black'}}
+      />
         <AccountStack.Screen
         name="NotificationPage"
         component={NotificationsScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: true,headerBackTitle:false,  title: 'NOTIFICATIONS', headerTintColor: 'black'}}
       />
         <AccountStack.Screen
         name="AddressBookScreen"
@@ -79,17 +86,33 @@ const AccountScreenNavigator = () => {
        <AccountStack.Screen
         name="PlumberRegistrationScreen"
         component={PlumberRegistrationScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: true,headerBackTitle:false,  title: 'PLUMBER REGISTRATION', headerTintColor: 'black'}}
+      />
+       <AccountStack.Screen
+        name="NewPlumberRegistration"
+        component={NewPlumberRegistration}
+        options={{ headerShown: true,headerBackTitle:false,  title: 'PLUMBER REGISTRATION', headerTintColor: 'black'}}
       />
        <AccountStack.Screen
         name="ServiceComplaintScreen"
         component={ServiceComplaintScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: true,headerBackTitle:false,  title: 'SERVICE COMPLAINT REGISTER', headerTintColor: 'black',headerTitleStyle: {
+        fontSize: 16,
+
+      },  }}
+      />
+       <AccountStack.Screen
+        name="NewServiceComplaint"
+        component={NewServiceComplaintScreen}
+        options={{ headerShown: true,headerBackTitle:false,  title: 'SERVICE COMPLAINT REGISTER', headerTintColor: 'black',headerTitleStyle: {
+        fontSize: 16,
+
+      },  }}
       />
        <AccountStack.Screen
         name="AboutUsScreen"
         component={AboutUsScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: true,headerBackTitle:false,  title: 'ABOUT US', headerTintColor: 'black' }}
       />
     </AccountStack.Navigator>
   );

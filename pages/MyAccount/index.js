@@ -13,12 +13,15 @@ const MenuItem = ({ name, icon, screen, navigation }) => (
     </TouchableOpacity>
   );
 const MyAccountScreen = ({navigation}) => {
-    
+    const handleBackPress = () => {
+      navigation.goBack()   
+      };
+     
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Black Background for Status Bar & Header */}
       <View style={styles.blackBackground}>
-        <AccountHeader />
+        <AccountHeader onBackPress={handleBackPress} />
       </View>
 
       {/* Main Content */}
@@ -38,7 +41,7 @@ const MyAccountScreen = ({navigation}) => {
                 {"\n"}₹ 1,50,000
               </Text>
             </View>
-            <TouchableOpacity style={styles.paymentButton} onPress={() => navigation.navigate("PaymentsScreen")}>
+            <TouchableOpacity style={styles.paymentButton} onPress={() =>navigation.navigate('MakePayment')}>
   <Text style={styles.paymentButtonText}>Make Payment</Text>
 </TouchableOpacity>
           </View>

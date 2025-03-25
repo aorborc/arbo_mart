@@ -1,9 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-
-const AccountHeader = () => {
+import { View, Text, StyleSheet,TouchableOpacity,Image } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+const AccountHeader = ({ onBackPress }) => {
   return (
     <View style={styles.container}>
+         <TouchableOpacity onPress={onBackPress} style={styles.backButton}>
+         <Image source={require("../assets/icons/Back Page Light.png")} style={styles.backIcon} />
+        </TouchableOpacity>
       <View style={styles.leftSection}>
         <Text style={styles.companyName}>Comma India Pvt. Ltd.</Text>
         <Text style={styles.userInfo}>+917448459121 - Vijay</Text>
@@ -22,6 +25,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 15,
+  },
+  backButton: {
+    marginRight: 10,
+  },
+  backIcon: {
+    width: 24, // Adjust width as needed
+    height: 24, // Adjust height as needed
+    tintColor: "white", // If the image supports tinting
   },
   leftSection: {
     flex: 2,
